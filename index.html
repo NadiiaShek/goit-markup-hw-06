@@ -411,9 +411,57 @@
         <button type="button" class="modal-close-btn close-btn" data-modal-close>
              <svg class="close-modal" width="11" height="11">
                 <use href="./images/SVG/sprite.svg#close-modal"> </use>
-             </svg>
-            
+             </svg>   
         </button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+     <form>
+        <lebel class="label-modale" for="user-name">Имя</lebel>
+        <input 
+        type="name" 
+        class="modale-input" 
+        name="user-name" 
+        placeholder="Введите имя" 
+        required minlength="2"
+        id="user-name">
+
+        <lebel class="label-modale" for="user-tel">Телефон</lebel>
+        <input 
+        type="tel" 
+        class="modale-input" 
+        name="user-tel" 
+        placeholder="+38 (067) 514-45-45" 
+        required
+        pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" 
+        title="+38 (067) 514-45-45" 
+        id="user-tel">
+
+        <lebel class="label-modale" for="user-email">Почта</lebel>
+        <input 
+        type="email" 
+        class="modale-input" 
+        name="user-email" 
+        placeholder="Введите почту" 
+        required 
+        id="user-email">
+
+        <lebel class="label-modale" for="user-comment">Комментарий</lebel>
+        <textarea 
+        type="text" 
+        class="comment-modale"
+        name="user-comment"
+        
+        id="user-comment"> 
+        </textarea>
+
+        <input type="checkbox" class="checkbox-modale">
+        <p class="text-chekbox-modale">Соглашаюсь с рассылкой и принимаю Условия договора</p>
+        
+        <button type="submit" class="btn-send-modale">Отправить</button>
+
+
+
+
+    </form>
     </div>
 </div>
 <script src="./JS/modal.js"></script>
