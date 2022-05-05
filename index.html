@@ -414,7 +414,7 @@
             </svg>   
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-    <form>    
+        <form>    
         <lebel class="label-modale" for="user-name">Имя</lebel>
         <div class="field-name-wrap">
         <input 
@@ -422,7 +422,7 @@
         class="modale-input" 
         name="user-name" 
         required minlength="2"
-        id="user-name">
+        id="user-name"/>
         <svg class="icon-person-modale" width="18" height="18">
             <use href="./images/SVG/sprite.svg#icon-person-modale">
             </use>
@@ -440,7 +440,7 @@
         required
         pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" 
         title="+38 (067) 514-45-45" 
-        id="user-tel">
+        id="user-tel"/>
         <svg class="icon-telephone-modale" width="18" height="18">
             <use href="./images/SVG/sprite.svg#icon-telephone-modale">
             </use>
@@ -454,7 +454,7 @@
         class="modale-input" 
         name="user-email" 
         required 
-        id="user-email">
+        id="user-email"/>
         <svg class="icon-envelope-modale" width="18" height="18">
             <use href="./images/SVG/sprite.svg#icon-envelope-modale">
             </use>
@@ -462,9 +462,8 @@
         </div>
 
 
-        <div class="modal-field"> 
+        <div class="modal-comment"> 
         <lebel class="label-modale" for="user-comment">Комментарий</lebel>
-
         <textarea 
         placeholder="Введите текст"
         class="comment-modale"
@@ -472,21 +471,25 @@
         id="user-comment"
         ></textarea>
         </div>
-
+        
+        <div class="modal-policy">   
         <input 
         type="checkbox" 
-        id="agree-checkbox" 
         class="checkbox-modale"
-        name="checkbox-modale"
-        />
-        <lebel class="lebel-checkbox" for="agree-checkbox">Соглашаюсь с рассылкой и принимаю Условия договора</lebel>
+        id="agree-checkbox" 
+        name="checkbox-policy"/>
+        
+        <lebel for="agree-checkbox" class="text-checkbox">Соглашаюсь с рассылкой и принимаю Условия договора</lebel>
+        </div>
+        
+        
         
         <button type="submit" class="btn-send-modale">Отправить</button>
 
 
 
 
-    </form>
+        </form>
     </div>
 </div>
 <script src="./JS/modal.js"></script>
