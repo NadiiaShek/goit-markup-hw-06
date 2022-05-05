@@ -45,37 +45,17 @@ Congratulations, you've built your first web form. It looks like this live: (24 
 
 
 
- <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <form>
-            <lebel class="label-modale" for="user-name">Имя</lebel>
-            <input 
-            type="name" 
-            class="model-input" 
-            name="user-name" 
-            placeholder="Введите имя"
-            required
-            minlength="2"
-            id="user-name">
-            
-            <lebel class="label-modale" for="user-tel">Телефон</lebel>
-            <input type="tel" class="model-input" name="user-tel" placeholder="+38 (067) 514-45-45" required
-                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (067) 514-45-45" id="user-tel">
-            
-            <lebel class="label-modale" for="user-email">Почта</lebel>
-                <input type="email" class="model-input" name="user-email" placeholder="Введите почту" required
-                id="user-email">
+ Наполегливо рекомендую пройтися по своїй роботі та поправити, якщо раптом ще не здали. Ну або перевірити ще раз.
+ Форма у футері. Зверніть увагу на те, як вона там позиціонована - вона притиснута до правого краю контейнера.
+Позиціонування іконок у input. В основному це така конструкція: загальний div, в якому лежить label, input та svg-іконка. Іконка позиціонується абсолютом, але щодо свого батька -- div. Input -- це сусідній елемент для іконки. Не вірно (непотрібно) буде також прописати для інпуту position: relative. Можна вгадувати позиціонування до подібної візуальної відповідності, але це теж не буде технічно правильно.
+Щоб правильно спозиціонувати іконку, є кілька варіантів, але найпростіший і зрозуміліший для вас - input і svg-іконку покласти в div. Цьому контейнеру дати position:relative. svg-position:absolute. І тепер буде зрозуміле і грамотне позиціонування іконки - вона через absolute дісталася з потоку документа, а div прийняв розміри input
+Коли абсолютно позиціонуєте, не забувайте, що, як правило, треба дві точки. Наприклад top та left. Навіть якщо візуально нічого не зміниться.
+Не забувайте, коли ставите, наприклад top:50% - це не зовсім центр, який хочеться. Щоб він був дійсним, додавайте transform: translateY(-50%);
+Не забуваймо робити фокус на кастомному чекбоксі.
 
-            <lebel class="label-modale" for="text-comments">Комментарий</lebel>
-            <textarea 
-            type="text"
-            class="modale-textarea" name="text-comments" 
-            placeholder="Введите текст" id="text-comments">
 
-            <input 
-            type="checkbox" 
-            class="checkbox-modale">
-            <p class="text-chekbox-modale">Соглашаюсь с рассылкой и принимаю Условия договора</p>
-                
-            <button 
-            type="submit" class="btn-send-modale">Отправить</button>
-        </form>
+
+
+
+
+
