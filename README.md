@@ -53,9 +53,23 @@ Congratulations, you've built your first web form. It looks like this live: (24 
 Не забувайте, коли ставите, наприклад top:50% - це не зовсім центр, який хочеться. Щоб він був дійсним, додавайте transform: translateY(-50%);
 Не забуваймо робити фокус на кастомному чекбоксі.
 
+/* .checkbox-modale:checked + .text-checkbox .icon-checkbox {
+	fill: black;
+} */
 
+/* .text-checkbox::before {
+	content: "";
+	width: 16px;
+	height: 15px;
+	border: solid 2px #212121;
+	border-radius: 3px;
+	margin-right: 7px;
+}
 
-
-
-
-
+.checkbox-modale:checked + .text-checkbox::before {
+	background-color: var(--focus-hover-color);
+	background-image: url(../images/SVG/galochka-checkbox.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+} */
