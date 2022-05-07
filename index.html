@@ -441,7 +441,6 @@
         </div>
 
         
-
         <lebel class="label-modale" for="user-tel">Телефон</lebel>
         <div class="field-tel-wrap"> 
         <input type="tel" class="modale-input" name="user-tel" 
@@ -469,16 +468,20 @@
         </div>
         
         <div class="modal-policy">   
-        <input type="checkbox" class="checkbox-modale" id="agree-checkbox" name="checkbox-policy"/>
-        <lebel for="agree-checkbox" class="text-checkbox">
-            <span> 
-                <svg class="icon-checkbox" width="11" height="8"> 
-                    <use href="./images/SVG/sprite.svg#icon-checkbox">
-                    </use>
+        <label class="text-checkbox">
+            <input type="checkbox" class="checkbox-modale visually-hidden" name="checkbox-policy"
+            required>
+            <span class="custom-checkbox">
+                <svg class="icon-checkbox" width="16" height="15">
+                    <use href="./images/SVG/sprite.svg#icon-check"></use>
                 </svg>
-            </span>Соглашаюсь с рассылкой и принимаю 
-            <a class="policy-link" href="./"> Условия договора</a></lebel>
+            </span>
+
+            Соглашаюсь с рассылкой и принимаю
+            <a class="policy-link" href="./">Условия договора</a>
+        </label>
         </div>
+        
         
         
         <button type="submit" class="btn-send-modale">Отправить</button>

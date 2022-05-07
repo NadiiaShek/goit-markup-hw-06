@@ -642,6 +642,7 @@ header {
 .address-block {
 	display: flex;
 	align-items: baseline;
+	justify-content: space-between;
 }
 
 .footer-contacts-block {
@@ -660,6 +661,7 @@ header {
 .subscription-footer {
 	display: flex;
 	flex-wrap: wrap;
+
 	align-items: baseline;
 }
 
@@ -710,10 +712,11 @@ header {
 }
 
 .email-wrap {
+	position: relative;
 	display: flex;
 	height: 50px;
 	flex-wrap: nowrap;
-	flex-direction: center;
+	flex-direction: end;
 	align-items: center;
 	justify-content: center;
 }
@@ -761,10 +764,9 @@ header {
 }
 
 .btn-subc-footer {
-	position: relative;
 	display: flex;
 	flex-direction: center;
-	justify-content: center;
+	justify-content: row;
 	align-items: center;
 
 	width: 200px;
@@ -773,9 +775,8 @@ header {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border-style: none;
-	margin-right: 0;
-	margin-left: 0;
 	padding-left: 29px;
+	padding-right: 10px;
 
 	font-weight: 700;
 	font-size: 16px;
@@ -785,13 +786,15 @@ header {
 }
 
 .icon-send-footer {
+	position: absolute;
+	top: 50%;
+	left: 95%;
+	transform: translateY(-50%) translateX(-95%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 24px;
 	height: 24px;
-	margin-left: 10px;
-	margin-right: auto;
 	fill: #ffffff;
 }
 
@@ -915,9 +918,10 @@ header {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	margin-left: 12px;
+	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 
 .modale-input:hover + .icon-person-modale,
@@ -937,9 +941,10 @@ header {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	margin-left: 12px;
+	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 
 .modale-input:hover + .icon-telephone-modale,
@@ -960,9 +965,10 @@ header {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	margin-left: 12px;
+	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 
 .modale-input:hover + .icon-envelope-modale,
@@ -986,43 +992,55 @@ header {
 	color: rgba(117, 117, 117, 0.5);
 }
 
+.modal-comment:hover > .comment-modale,
+.modal-comment:focus > .comment-modale {
+	border-color: var(--focus-hover-color);
+	transition: fill var(--animation-timing-function);
+	cursor: pointer;
+}
+
 .modal-policy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 30px;
 }
 
-.text-checkbox {
+.custom-checkbox {
 	position: relative;
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	width: 16px;
+	height: 15px;
+	border: solid 2px #212121;
+	border-radius: 3px;
+	margin-right: 7px;
+}
+
+.icon-checkbox {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: transparent;
+}
+
+.text-checkbox {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
 }
 
-.icon-checkbox {
-	width: 11px;
-	height: 8px;
+.text-checkbox .policy-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-.text-checkbox span {
-	width: 16px;
-	height: 15px;
-	border: solid 2px #212121;
-	border-radius: 3px;
-	margin-right: 7px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.checkbox-modale:checked + .text-checkbox span {
-	background-color: var(--focus-hover-color);
-	border: none;
-}
-.policy-link {
-	display: flex;
 	margin-left: 4px;
 	font-size: 14px;
 	line-height: 1.71px;
@@ -1030,6 +1048,51 @@ header {
 	text-decoration-line: underline;
 	color: var(--current-color);
 }
+
+.checkbox-modale:checked + span .icon-checkbox {
+	background-color: var(--focus-hover-color);
+	border: none;
+	fill: #ffffff;
+	border-radius: 3px;
+}
+
+/* 
+.text-checkbox {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: var(--main-text-color);
+} */
+
+/* .modal-policy {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.icon-checkbox {
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text-checkbox {
+	width: 16px;
+	height: 15px;
+	border: solid 2px #212121;
+	border-radius: 3px;
+	margin-right: 7px;
+}
+.checkbox-modale:checked + .text-checkbox .icon-checkbox {
+	background-color: var(--focus-hover-color);
+	border: none;
+} */
 
 .btn-send-modale {
 	width: 200px;
