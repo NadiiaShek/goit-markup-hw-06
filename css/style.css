@@ -752,7 +752,8 @@ header {
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.03em;
-	text-decoration-color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.6);
+
 	background-color: inherit;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -772,9 +773,9 @@ header {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border-style: none;
-	margin-right: auto;
-	margin-left: auto;
-	/* padding: 10px 62px 10px 0px; */
+	margin-right: 0;
+	margin-left: 0;
+	padding-left: 29px;
 
 	font-weight: 700;
 	font-size: 16px;
@@ -784,14 +785,13 @@ header {
 }
 
 .icon-send-footer {
-	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 24px;
 	height: 24px;
 	margin-left: 10px;
-	margin-right: 28px;
+	margin-right: auto;
 	fill: #ffffff;
 }
 
@@ -1001,7 +1001,6 @@ header {
 }
 
 .icon-checkbox {
-	position: absolute;
 	width: 11px;
 	height: 8px;
 	display: flex;
