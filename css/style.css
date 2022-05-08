@@ -17,6 +17,7 @@
 	--color-soc-icons: #afb1b8;
 	--animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 	--color-close-modal: #000000;
+	--custom-pointer: url(../images/finger.png), auto;
 }
 
 body {
@@ -859,7 +860,7 @@ header {
 .close-modal:hover,
 .close-modal:focus {
 	fill: var(--focus-hover-color);
-	cursor: pointer;
+	cursor: var(--custom-pointer);
 	transition: color;
 }
 
@@ -892,7 +893,7 @@ header {
 .modale-input:hover,
 .modale-input:focus {
 	border-color: var(--focus-hover-color);
-	cursor: pointer;
+	cursor: var(--custom-pointer);
 	transition: border-color var(--animation-timing-function);
 	transition: fill var(--animation-timing-function);
 }
@@ -944,7 +945,7 @@ header {
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
-	cursor: pointer;
+	cursor: var(--custom-pointer);
 }
 
 .modale-input:hover + .icon-telephone-modale,
@@ -968,7 +969,7 @@ header {
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
-	cursor: pointer;
+	cursor: var(--custom-pointer);
 }
 
 .modale-input:hover + .icon-envelope-modale,
@@ -992,11 +993,12 @@ header {
 	color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-comment:hover > .comment-modale,
-.modal-comment:focus > .comment-modale {
-	border-color: var(--focus-hover-color);
+.comment-modale:focus,
+.comment-modale:hover {
+	border: 1px solid var(--focus-hover-color);
+	outline-color: var(--focus-hover-color);
 	transition: fill var(--animation-timing-function);
-	cursor: pointer;
+	cursor: var(--custom-pointer);
 }
 
 .modal-policy {
@@ -1016,6 +1018,12 @@ header {
 	border: solid 2px #212121;
 	border-radius: 3px;
 	margin-right: 7px;
+}
+
+.checkbox-modale:focus + .custom-checkbox,
+.checkbox-modale:hover + .custom-checkbox {
+	border: solid 2px var(--focus-hover-color);
+	cursor: var(--custom-pointer);
 }
 
 .icon-checkbox {
@@ -1049,50 +1057,18 @@ header {
 	color: var(--current-color);
 }
 
+.text-checkbox:hover + .policy-link,
+.text-checkbox:hover + .policy-link {
+	outline-color: var(--focus-hover-color);
+	border: 1px solid var(--focus-hover-color);
+}
+
 .checkbox-modale:checked + span .icon-checkbox {
 	background-color: var(--focus-hover-color);
 	border: none;
 	fill: #ffffff;
 	border-radius: 3px;
 }
-
-/* 
-.text-checkbox {
-	display: flex;
-	align-items: center;
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
-	color: var(--main-text-color);
-} */
-
-/* .modal-policy {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	margin-bottom: 30px;
-}
-
-.icon-checkbox {
-	position: absolute;
-	width: 16px;
-	height: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.text-checkbox {
-	width: 16px;
-	height: 15px;
-	border: solid 2px #212121;
-	border-radius: 3px;
-	margin-right: 7px;
-}
-.checkbox-modale:checked + .text-checkbox .icon-checkbox {
-	background-color: var(--focus-hover-color);
-	border: none;
-} */
 
 .btn-send-modale {
 	width: 200px;
