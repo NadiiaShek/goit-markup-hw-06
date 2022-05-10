@@ -86,7 +86,7 @@
         <li class="benefits-list-item">
         <div class="benifits-bg">
             <svg class="benefits-icon" width="70" height="70">
-                <use href="./images/SVG/sprite.svg#icon-Vector" > </use>
+                <use href="./images/SVG/sprite.svg#icon-clock"></use>
             </svg>
             </div>
         <h3 class="title">Пунктуальность</h3>
@@ -95,7 +95,7 @@
         <li class="benefits-list-item">
             <div class="benifits-bg"> 
             <svg class="benefits-icon" width="70" height="70">
-                <use href="./images/SVG/sprite.svg#icon-Vector-computer" > </use>
+                <use href="./images/SVG/sprite.svg#icon-vector-computer" > </use>
             </svg>
             </div>
         <h3 class="title">Планирование</h3>
@@ -404,7 +404,7 @@
                     <form> 
                 <div class="email-wrap"> 
                     <input type="email" class="email-input-footer" name="email-input-footer" placeholder="E-mail"
-                    required id="user-email"
+                    required id="footer-email"
                     > 
                     
                     <button type="submit" class="btn-subc-footer">Подписаться<svg class="icon-send-footer" width="24" height="24">
@@ -431,7 +431,7 @@
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form>    
-        <lebel for="user-name" class="label-modale">Имя</lebel>
+        <label for="user-name" class="label-modale">Имя</label>
         <div class="field-name-wrap">
         <input type="text" class="modale-input" name="user-name" id="user-name"/>
         <svg class="icon-person-modale" width="18" height="18">
@@ -441,7 +441,7 @@
         </div>
 
         
-        <lebel class="label-modale" for="user-tel">Телефон</lebel>
+        <label class="label-modale" for="user-tel">Телефон</label>
         <div class="field-tel-wrap"> 
         <input type="tel" class="modale-input" name="user-tel" 
         required pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (067) 514-45-45" id="user-tel"/>
@@ -451,7 +451,7 @@
         </svg>
         </div>
 
-        <lebel class="label-modale" for="user-email">Почта</lebel>
+        <label class="label-modale" for="user-email">Почта</label>
         <div class="field-email-wrap">
         <input type="email" class="modale-input" name="user-email" required id="user-email"/>
         <svg class="icon-envelope-modale" width="18" height="18">
@@ -462,9 +462,7 @@
 
 
         <div class="modal-comment"> 
-        <lebel class="label-modale" for="user-comment">Комментарий</lebel>
-        <textarea placeholder="Введите текст" class="comment-modale" name="user-comment" id="user-comment">
-        </textarea>
+        <label class="label-modale" for="user-comment">Комментарий</label><textarea placeholder="Введите текст" class="comment-modale" name="user-comment" id="user-comment"></textarea>
         </div>
         
         <div class="modal-policy">   

@@ -421,6 +421,7 @@ header {
 	display: block;
 	text-decoration: none;
 	color: inherit;
+	transition: transform box-shadow var(--animation-timing-function);
 }
 
 .filtr-portfolio {
@@ -446,7 +447,7 @@ header {
 	letter-spacing: 0.03em;
 	color: var(--body-text-color);
 	background-color: var(--btn-portfolio-background-color);
-	transition: background-color var(--animation-timing-function);
+	transition: background-color color box-shadow var(--animation-timing-function);
 }
 
 .button-portfolio:hover,
@@ -455,7 +456,7 @@ header {
 	background-color: var(--focus-hover-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
 		0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: background-color var(--animation-timing-function);
+	transition: background-color color box-shadow var(--animation-timing-function);
 }
 .btn-portfolio-list .btn-active {
 	color: var(--btn-text-color);
@@ -477,22 +478,16 @@ header {
 }
 .item-portfolio {
 	outline-style: solid;
-	outline-color: var(--body-background-color);
+	outline-color: transparent;
 	flex-basis: calc((100% - 3 * 30px) / 3);
 	margin-right: 30px;
 	margin-bottom: 30px;
 	overflow: hidden;
+	transition: box-shadow var(--animation-timing-function);
 }
 
 .item-portfolio-wrap {
 	position: relative;
-	transition: transform var(--animation-timing-function);
-}
-
-.item-portfolio-link:hover,
-.item-portfolio-link:focus {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-		1px 4px 6px rgba(0, 0, 0, 0.16);
 	transition: transform var(--animation-timing-function);
 }
 
@@ -516,10 +511,18 @@ header {
 	overflow: auto;
 }
 
+.item-portfolio:hover,
+.item-portfolio:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+		1px 4px 6px rgba(0, 0, 0, 0.16);
+	transition: box-shadow var(--animation-timing-function);
+}
+
 .item-portfolio-link:hover .portfolio-top-text,
 .item-portfolio-link:focus .portfolio-top-text {
 	transform: translateY(0%) var(--animation-timing-function);
 }
+
 .porfolio-border {
 	padding: 20px 24px;
 	border-bottom: var(--border-style);
@@ -662,7 +665,7 @@ header {
 .subscription-footer {
 	display: flex;
 	flex-wrap: wrap;
-
+	margin-left: auto;
 	align-items: baseline;
 }
 
@@ -766,8 +769,7 @@ header {
 
 .btn-subc-footer {
 	display: flex;
-	flex-direction: center;
-	justify-content: row;
+	justify-content: flex-start;
 	align-items: center;
 
 	width: 200px;
@@ -978,9 +980,12 @@ header {
 	transition: fill var(--animation-timing-function);
 }
 
+.modal-comment {
+	margin-bottom: 20px;
+}
+
 .comment-modale {
 	display: block;
-	margin-bottom: 20px;
 	width: 100%;
 	height: 120px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
